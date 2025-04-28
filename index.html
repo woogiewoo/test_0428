@@ -99,7 +99,7 @@
         border-radius: 50%;
         text-align: center;
         opacity: 0;
-        transition: opacity 0.3s;
+        transition: opacity 1s;
       }
 
       .arrow-up span {
@@ -246,6 +246,11 @@
         } else {
           arrowUp.classList.remove('show');
         }
+      })
+
+      const home = document.querySelector('#home');
+      arrowUp.addEventListener('click', function() {
+        home.scrollIntoView({behavior:"smooth"});
       })
 
 

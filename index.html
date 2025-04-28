@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_upward" />
+
+    <style>
+
+
+
+      body {
+        margin: 0;
+        height: 2000px;
+      }
+
+      section {
+        width: 100%;
+        height: 100vh;
+      }
+
+      .wrapper {
+        padding-top: 88px;
+        max-width: 1200px; /* 콘텐츠 영역을 1200px로 제한 */
+        margin: auto;
+      }
+
+      h1 {
+        color: #833815c5;
+        font-size: 48px;
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+
+      h3 {
+        font-size: 24px;
+        font-weight: 300;
+      }
+
+      .btns {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10; /* 모든 것의 위에 오도록 */
+      }
+
+      .btns .container {
+        /* btns 안에 있는 container 선택 */
+        position: relative;
+        max-width: 100%;
+        padding: 20px;
+        background-color: #83381565;
+        margin: auto;
+      }
+
+      .btns__menu {
+        display: flex; /* 가로로 만들기 */
+        justify-content: center; /* 글자 가운데로 오도록 만들기 */
+      }
+
+      .btns__menu .btn {
+        font-size: 16px;
+        font-weight: 600;
+        color: #ffffff;
+        width: 150px;
+        height: 40px;
+        background-color: #833815;
+        border-radius: 6px;
+        margin: 4px;
+        cursor: pointer; /* 손가락 모양 보이도록 */
+      }
+
+      .btns__menu .btn:hover {
+        background-color: white;
+        border: 1px solid #fff;
+        color: bisque;
+      }
+
+      button {
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        outline: none;
+      }
+
+
+      .arrow-up {
+        position: fixed;
+        bottom: 60px;
+        right: 50px;
+        width: 70px;
+        height: 70px;
+        color: white;
+        background-color: #cf5f32;
+        border-radius: 50%;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .arrow-up span {
+        font-size: 50px;
+      }
+
+      .arrow-up.show {
+        opacity: 1;
+      }
+
+
+    </style>
+
+
+
+  </head>
+
+
+
+
+  <body>
+    <div class="btns">
+      <div class="container">
+        <div class="btns__menu">
+          <button class="btn home">Home</button>
+          <button class="btn about">About</button>
+          <button class="btn skills">Skills</button>
+          <button class="btn works">Works</button>
+          <button class="btn contact">Contact</button>
+        </div>
+      </div>
+    </div>
+
+    <section id="home">
+      <div class="wrapper">
+        <h1>Home</h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h3>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, fuga. Nemo placeat porro totam quam recusandae! Accusamus possimus earum autem consequatur cumque nesciunt vel similique quam?
+          Magnam placeat possimus maiores?
+        </h3>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrapper">
+        <h1>About</h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h3>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, fuga. Nemo placeat porro totam quam recusandae! Accusamus possimus earum autem consequatur cumque nesciunt vel similique quam?
+          Magnam placeat possimus maiores?
+        </h3>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrapper">
+        <h1>Skills</h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h3>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, fuga. Nemo placeat porro totam quam recusandae! Accusamus possimus earum autem consequatur cumque nesciunt vel similique quam?
+          Magnam placeat possimus maiores?
+        </h3>
+      </div>
+    </section>
+
+    <section id="works">
+      <div class="wrapper">
+        <h1>Works</h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h3>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, fuga. Nemo placeat porro totam quam recusandae! Accusamus possimus earum autem consequatur cumque nesciunt vel similique quam?
+          Magnam placeat possimus maiores?
+        </h3>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrapper">
+        <h1>Contact</h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h3>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, fuga. Nemo placeat porro totam quam recusandae! Accusamus possimus earum autem consequatur cumque nesciunt vel similique quam?
+          Magnam placeat possimus maiores?
+        </h3>
+      </div>
+    </section>
+
+
+    
+    <button class="arrow-up">
+
+      <span class="material-symbols-outlined">
+        arrow_upward
+        </span>
+
+    </button>
+
+
+
+
+
+    <script>
+      const btnHome = document.querySelector('.home'); /* 버튼에서 홈이라는 이름 가진애를 불러온다 */
+      const sectionHome = document.querySelector('#home'); /* 섹션에서 홈이라는 이름 가진애를 불러온다 */
+      /* 버튼 클릭하면 해당 섹션으로 이동하는 명령 */
+      btnHome.addEventListener('click', function () {
+        /* 'click'은 이미 만들어진 용어인가? API 용어 이다 */ sectionHome.scrollIntoView({ behavior: 'smooth', block: 'center' }); /* 왜 function의 ()안에 명령을 넣지 않는가?   */
+      });
+
+      const btnAbout = document.querySelector('.about'); /* 버튼에서 홈이라는 이름 가진애를 불러온다 */
+      const sectionAbout = document.querySelector('#about'); /* 섹션에서 홈이라는 이름 가진애를 불러온다 */
+      /* 버튼 클릭하면 해당 섹션으로 이동하는 명령 */
+      btnAbout.addEventListener('click', function () {
+        /* 'click'은 이미 만들어진 용어인가? API 용어 이다 */ sectionAbout.scrollIntoView({ behavior: 'smooth', block: 'center' }); /* 왜 function의 ()안에 명령을 넣지 않는가?   */
+      });
+
+      const btnSkills = document.querySelector('.skills'); /* 버튼에서 홈이라는 이름 가진애를 불러온다 */
+      const sectionSkills = document.querySelector('#skills'); /* 섹션에서 홈이라는 이름 가진애를 불러온다 */
+      /* 버튼 클릭하면 해당 섹션으로 이동하는 명령 */
+      btnSkills.addEventListener('click', function () {
+        /* 'click'은 이미 만들어진 용어인가? API 용어 이다 */ sectionSkills.scrollIntoView({ behavior: 'smooth', block: 'center' }); /* 왜 function의 ()안에 명령을 넣지 않는가?   */
+      });
+
+      const btnWorks = document.querySelector('.works'); /* 버튼에서 홈이라는 이름 가진애를 불러온다 */
+      const sectionWorks = document.querySelector('#works'); /* 섹션에서 홈이라는 이름 가진애를 불러온다 */
+      /* 버튼 클릭하면 해당 섹션으로 이동하는 명령 */
+      btnWorks.addEventListener('click', function () {
+        /* 'click'은 이미 만들어진 용어인가? API 용어 이다 */ sectionWorks.scrollIntoView({ behavior: 'smooth', block: 'center' }); /* 왜 function의 ()안에 명령을 넣지 않는가?   */
+      });
+
+      const btnContact = document.querySelector('.contact'); /* 버튼에서 홈이라는 이름 가진애를 불러온다 */
+      const sectionContact = document.querySelector('#contact'); /* 섹션에서 홈이라는 이름 가진애를 불러온다 */
+      /* 버튼 클릭하면 해당 섹션으로 이동하는 명령 */
+      btnContact.addEventListener('click', function () {
+        /* 'click'은 이미 만들어진 용어인가? API 용어 이다 */ sectionContact.scrollIntoView({ behavior: 'smooth', block: 'center' }); /* 왜 function의 ()안에 명령을 넣지 않는가?   */
+      });
+
+
+      const arrowUp = document.querySelector('.arrow-up')
+      document.addEventListener('scroll', function(){
+        if (window.scrollY > 300) {
+          arrowUp.classList.add('show');
+        } else {
+          arrowUp.classList.remove('show');
+        }
+      })
+
+
+
+
+
+    </script>
+  </body>
+</html>
